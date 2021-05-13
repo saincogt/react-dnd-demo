@@ -1,38 +1,38 @@
 {
   "name": "dmockers",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Y`all! This is D Mockers!",
+  "main": "server.js",
+  "author": "saincogt <saincogt@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon server",
+    "server": "nodemon server",
+    "client": "cd client && yarn start",
+    "jserver": "json-server --watch ./db/db.json --port 5000",
+    "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\""
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "config": "^3.3.6",
+    "dotenv": "^9.0.0",
+    "express": "^4.17.1",
+    "faker": "^5.5.3",
+    "json-server": "^0.16.3",
+    "lodash": "^4.17.21",
+    "node-sass": "^5.0.0",
     "react": "^17.0.2",
+    "react-beautiful-dnd": "^13.1.0",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "request": "^2.88.2",
+    "styled-components": "^5.3.0",
     "web-vitals": "^1.0.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "concurrently": "^6.1.0",
+    "nodemon": "^2.0.7"
   }
 }
